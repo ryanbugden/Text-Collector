@@ -4,13 +4,6 @@ A RoboFont start-up script that places a button to the left of the main input te
 ![](./_images/textCollector_demo.png)
 
 
-### To Do:
-* Clean it up.
-* Take feedback.
-* Make into a RoboFont extension.
-
-
-
 ### Versions:
 
 ```
