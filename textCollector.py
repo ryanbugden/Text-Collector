@@ -53,7 +53,7 @@ class textCollector:
             after.append(string)
             print("after2 is ", after)
             setDefault("spaceCenterInputSamples", after)
-            print("saved input text, I think?")
+            print("saved input text.")
         else:
             print("did nothing.")
         
