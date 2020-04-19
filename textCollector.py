@@ -52,7 +52,7 @@ class textCollector:
         if string not in after:
             after.append(string)
             print("after2 is ", after)
-            setDefault("spaceCenterInputSamples", after, validate=True)
+            setDefault("spaceCenterInputSamples", after)
             print("saved input text, I think?")
         else:
             print("did nothing.")
