@@ -4,6 +4,10 @@ from mojo.subscriber import Subscriber, registerSpaceCenterSubscriber
 from lib.tools.defaults import getDefault, setDefault
 from vanilla import ImageButton
 
+
+PREF_KEY = "spaceCenterInputSamples"
+
+
 class TextCollector(Subscriber):
 	'''
 	Start-up script that puts a button in Space Center.
@@ -41,11 +45,11 @@ class TextCollector(Subscriber):
 	def saver_callback(self, sender):
 		csc = CurrentSpaceCenter()
 		string = csc.getRaw()
-		before = getDefault("spaceCenterInputSamples")
+		before = getDefault(PREF_KEY)
 		after = list(before)
 		if string not in after:
 			after.append(string)
-			setDefault("spaceCenterInputSamples", after)
+			setDefault(PREF_KEY, after)
 			preferencesChanged()
 		
 		 
