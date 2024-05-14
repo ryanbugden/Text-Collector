@@ -25,7 +25,7 @@ class TextCollector(Subscriber):
 		csc.top.glyphLineInput.setPosSize((l + b_w + gutter, t, w, h))
 		l, t, w, h = csc.top.glyphLineInput.getPosSize()
 		
-		image_path = os.path.join(os.path.dirname(__file__), "resources", "_icon_Save.pdf")
+		image_path = os.path.join(os.path.dirname(__file__), "resources", "save_icon.pdf")
 		csc.top.save = ImageButton(
 		  (l - gutter - b_w, t + inset_b, b_w, b_h), 
 		  imagePath = image_path,
