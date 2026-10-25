@@ -1,7 +1,7 @@
-import os
 from mojo.UI import CurrentSpaceCenter, preferencesChanged
 from mojo.subscriber import Subscriber, registerSpaceCenterSubscriber
 from lib.tools.defaults import getDefault, setDefault
+from pathlib import Path
 from vanilla import ImageButton
 
 
@@ -29,10 +29,10 @@ class TextCollector(Subscriber):
         csc.top.glyphLineInput.setPosSize((l + b_w + gutter, t, w, h))
         l, t, w, h = csc.top.glyphLineInput.getPosSize()
 
-        image_path = os.path.join(os.path.dirname(__file__), "resources", "save_icon.pdf")
+        image_path = Path(__file__).parent / "resources" / "save_icon.pdf"
         csc.top.save = ImageButton(
             (l - gutter - b_w, t + inset_b, b_w, b_h),
-            imagePath=image_path,
+            imagePath=str(image_path),
             callback=self.saver_callback,
             sizeStyle='regular'
         )
